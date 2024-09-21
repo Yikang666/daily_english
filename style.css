@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "思源宋体 Bold";
+  font-weight: 700;
+  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/Zfke4836b13e.woff2")
+      format("woff2"),
+    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/yrM3JXw1ZFoa.woff")
+      format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "思源宋体 Regular";
+  font-weight: 400;
+  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/ySEAFfLtmEZy.woff2")
+      format("woff2"),
+    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/7Ini8aNWZILF.woff")
+      format("woff");
+  font-display: swap;
+}
+
+html,
+body {
+  margin: 20px;
+}
+
+.header {
+  height: 50px;
+  font-family: "思源宋体 Bold";
+  font-weight: 700;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.banner .superscript {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 4px 10px;
+  border-radius: 14px;
+  transform: translate(-26px, 12px);
+  color: #fff;
+  font-family: "思源宋体 Regular";
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.waterfall a {
+  font-family: "思源宋体 Regular";
+  color: #86909c;
+  text-decoration: none;
+  border-bottom: 0;
+  border-bottom: #fff;
+  float: right;
+}
+
+.waterfall a:hover {
+  border-bottom: 1px solid;
+  transition: 0.2s;
+}
