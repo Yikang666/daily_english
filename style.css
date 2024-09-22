@@ -1,9 +1,9 @@
 @font-face {
   font-family: "思源宋体 Bold";
   font-weight: 700;
-  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/Zfke4836b13e.woff2")
+  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/3ftINsVT05pp.woff2")
       format("woff2"),
-    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/yrM3JXw1ZFoa.woff")
+    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/WH6YW0mrW4cK.woff")
       format("woff");
   font-display: swap;
 }
@@ -11,56 +11,115 @@
 @font-face {
   font-family: "思源宋体 Regular";
   font-weight: 400;
-  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/ySEAFfLtmEZy.woff2")
+  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/21k0BTNFlcK9.woff2")
       format("woff2"),
-    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/7Ini8aNWZILF.woff")
+    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/l8k9UMPMpTN4.woff")
       format("woff");
   font-display: swap;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html,
 body {
-  margin: 20px;
+  margin: 2vw 4vw;
 }
 
 .header {
-  height: 50px;
   font-family: "思源宋体 Bold";
   font-weight: 700;
 }
 
 .banner {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .banner img {
-  border-radius: 1rem;
+  border-radius: 2vw;
   width: 100%;
+  aspect-ratio: 1080 / 1412;
+  object-fit: cover;
 }
 
 .banner .superscript {
   position: absolute;
-  right: 0;
-  top: 0;
-  padding: 4px 10px;
-  border-radius: 14px;
-  transform: translate(-26px, 12px);
+  right: 4vw;
+  top: 1vw;
+  padding: 0.7vw 1.5vw;
+  border-radius: 3vw;
   color: #fff;
   font-family: "思源宋体 Regular";
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  font-size: 3vw;
+  line-height: 4vw;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
-.waterfall a {
+.banner .play {
+  position: absolute;
+  bottom: 4vw;
+  right: 4vw;
+  width: 5.4vw;
+  height: 5.4vw;
+  padding: 1.5vw 1.5vw;
+  border-radius: 10vw;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.banner .play svg {
+  fill: #fff;
+  transition: 0.2s;
+}
+
+.banner .play:hover > svg {
+  fill: #303133;
+}
+
+.waterfall .title {
+  display: flex;
+  align-items: baseline;
+}
+
+.waterfall .title h2 {
+  font-family: "思源宋体 Bold";
+}
+
+.waterfall .title a {
   font-family: "思源宋体 Regular";
   color: #86909c;
   text-decoration: none;
-  border-bottom: 0;
-  border-bottom: #fff;
-  float: right;
+  border-bottom: 0 #fff solid;
+  margin-left: auto;
+  transition: 0.2s;
 }
 
-.waterfall a:hover {
+.waterfall .title a:hover {
   border-bottom: 1px solid;
-  transition: 0.2s;
+}
+
+.waterfall .masonry {
+  width: 100%;
+  margin: auto;
+  columns: 2;
+  column-gap: 20px;
+}
+
+.waterfall .masonry .item {
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 30px;
+}
+
+.waterfall .masonry .item img {
+  border-radius: 1.4vw;
+  width: 100%;
+  aspect-ratio: 1080 / 1412;
+  object-fit: cover;
 }

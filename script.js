@@ -11,8 +11,13 @@ function sendGetRequest(url, callback) {
   xhr.send();
 }
 
-sendGetRequest("http://mirror.666-114514.eu.org/https://open.iciba.com/dsapi/", function (response) {
-  const data = JSON.parse(response);
-  document.querySelector('.banner img').setAttribute('src', data.fenxiang_img);
-  console.log(data);
-});
+sendGetRequest(
+  "https://mirror.666-114514.eu.org/https://open.iciba.com/dsapi/",
+  function (response) {
+    const data = JSON.parse(response);
+    document
+      .querySelector(".banner img")
+      .setAttribute("src", data.fenxiang_img);
+    document.querySelector(".banner audio").setAttribute("src", data.tts);
+  }
+);
