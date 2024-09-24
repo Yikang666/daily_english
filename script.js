@@ -1,6 +1,12 @@
 // 发送请求
 const xhr = new XMLHttpRequest();
 
+function setBanner(response) {
+  const data = JSON.parse(response);
+  document.querySelector(".banner img").setAttribute("src", data.fenxiang_img);
+  document.querySelector(".banner audio").setAttribute("src", data.tts);
+}
+
 function sendGetRequest(url, callback) {
   xhr.open("GET", url);
   xhr.onreadystatechange = function () {
@@ -14,18 +20,14 @@ function sendGetRequest(url, callback) {
 sendGetRequest(
   "https://mirror.666-114514.eu.org/https://open.iciba.com/dsapi/",
   function (response) {
-    const data = JSON.parse(response);
-    document
-      .querySelector(".banner img")
-      .setAttribute("src", data.fenxiang_img);
-    document.querySelector(".banner audio").setAttribute("src", data.tts);
+    setBanner(response);
   }
 );
 
 // Pjax 无感刷新
 function pjaxOnload() {
   const pjax = new Pjax({
-    selectors: ["title", "body:not(.header)"],
+    selectors: ["title", "#main"],
   });
 
   document.addEventListener("pjax:send", function () {

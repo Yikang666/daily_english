@@ -1,19 +1,21 @@
+/* 每日英语往期精选历史一句 */
 @font-face {
   font-family: "思源宋体 Bold";
   font-weight: 700;
-  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/3ftINsVT05pp.woff2")
+  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/SUTtQqGiFip6.woff2")
       format("woff2"),
-    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/WH6YW0mrW4cK.woff")
+    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/fe78PXOfJsKI.woff")
       format("woff");
   font-display: swap;
 }
 
+/* 历史一句查看全部1234567890-今日返回首页 */
 @font-face {
   font-family: "思源宋体 Regular";
   font-weight: 400;
-  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/21k0BTNFlcK9.woff2")
+  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/KrnP07qSuLGT.woff2")
       format("woff2"),
-    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/l8k9UMPMpTN4.woff")
+    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/JQq6ZTovkSXh.woff")
       format("woff");
   font-display: swap;
 }
@@ -82,16 +84,16 @@ body {
   fill: #303133;
 }
 
-.waterfall .title {
+.title {
   display: flex;
   align-items: baseline;
 }
 
-.waterfall .title h2 {
+.title h2 {
   font-family: "思源宋体 Bold";
 }
 
-.waterfall .title a {
+.title a {
   font-family: "思源宋体 Regular";
   color: #86909c;
   text-decoration: none;
@@ -100,7 +102,7 @@ body {
   transition: 0.2s;
 }
 
-.waterfall .title a:hover {
+.title a:hover {
   border-bottom: 1px solid;
 }
 
