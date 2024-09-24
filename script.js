@@ -21,3 +21,18 @@ sendGetRequest(
     document.querySelector(".banner audio").setAttribute("src", data.tts);
   }
 );
+
+// Pjax 无感刷新
+function pjaxOnload() {
+  const pjax = new Pjax({
+    selectors: ["title", "body:not(.header)"],
+  });
+
+  document.addEventListener("pjax:send", function () {
+    NProgress.start();
+  });
+
+  document.addEventListener("pjax:complete", function () {
+    NProgress.done();
+  });
+}
