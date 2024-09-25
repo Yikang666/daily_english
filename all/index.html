@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>历史一句 - 每日英语</title>
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
     <link rel="stylesheet" href="/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.staticfile.net/nprogress/0.2.0/nprogress.min.css" />
+      href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.css" />
   </head>
   <body>
     <h1 class="header">每日英语</h1>
@@ -17,13 +17,23 @@
         <h2>历史一句</h2>
         <a href="/">返回首页</a>
       </div>
-      <center><h2>开发中</h2></center>
+      <center>
+        <h2>开发中</h2>
+      </center>
+
+      <script>
+        document
+          .querySelector("a[href='/']")
+          .addEventListener("click", function () {
+            setBanner();
+          });
+      </script>
     </div>
 
     <script src="/script.js"></script>
     <script
-      src="https://cdn.staticfile.net/pjax/0.2.8/pjax.min.js"
+      src="https://code.bdstatic.com/npm/pjax@0.2.8/pjax.min.js"
       onload="javascript:pjaxOnload()"></script>
-    <script src="https://cdn.staticfile.net/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.js"></script>
   </body>
 </html>
