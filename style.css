@@ -9,13 +9,13 @@
   font-display: swap;
 }
 
-/* 历史一句查看全部1234567890-今日返回首页 */
+/* 历史一句查看全部1234567890-今日返回首页每英语Github */
 @font-face {
   font-family: "思源宋体 Regular";
   font-weight: 400;
-  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/KrnP07qSuLGT.woff2")
+  src: url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/WwOU2hwkkjLR.woff2")
       format("woff2"),
-    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/JQq6ZTovkSXh.woff")
+    url("//at.alicdn.com/wf/webfont/AyXzEUyQlBUv/XzI5O0vRfLfm.woff")
       format("woff");
   font-display: swap;
 }
@@ -27,6 +27,13 @@
 html,
 body {
   margin: 2vw 4vw;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .header {
@@ -62,7 +69,7 @@ body {
 
 .banner .play {
   position: absolute;
-  bottom: 4vw;
+  bottom: 4.5vw;
   right: 4vw;
   width: 5.4vw;
   height: 5.4vw;
@@ -124,4 +131,16 @@ body {
   width: 100%;
   aspect-ratio: 1080 / 1412;
   object-fit: cover;
+}
+
+footer {
+  text-align: center;
+  font-family: "思源宋体 Regular";
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+footer svg {
+  fill: #303133;
+  margin-bottom: -4px;
 }

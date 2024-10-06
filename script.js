@@ -26,6 +26,8 @@ function setBanner() {
 
 setBanner();
 
+const pathnameList = ["/"];
+
 // Pjax 无感刷新
 function pjaxOnload() {
   const pjax = new Pjax({
@@ -38,5 +40,8 @@ function pjaxOnload() {
 
   document.addEventListener("pjax:complete", function () {
     NProgress.done();
+    if (pathnameList.includes(window.location.pathname)) {
+      setBanner();
+    }
   });
 }
