@@ -43,3 +43,29 @@ function pjaxOnload() {
     }
   });
 }
+
+// 图片加载动画
+const images = document.querySelectorAll("img");
+
+function handleImageLoading(image) {
+  const imageWrapper = document.createElement("div");
+  imageWrapper.classList.add("image-wrapper");
+
+  image.parentNode.insertBefore(imageWrapper, image);
+  imageWrapper.appendChild(image);
+
+  const loadingAnimation = document.createElement("div");
+  loadingAnimation.classList.add("loading-animation");
+
+  const spinner = document.createElement("div");
+  spinner.classList.add("spinner");
+  loadingAnimation.appendChild(spinner);
+
+  imageWrapper.appendChild(loadingAnimation);
+
+  // 图片加载完成
+  image.addEventListener("load", () => {
+    loadingAnimation.style.display = "none";
+    image.style.filter = "blur(0)";
+  });
+}

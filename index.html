@@ -26,7 +26,7 @@
 
     <div id="main">
       <div class="banner">
-        <img src="https://jufun.888-114514.eu.org/mxtheme/images/load.gif" />
+        <img class="image" />
         <p class="superscript">今日</p>
         <div
           class="play"
@@ -76,6 +76,10 @@
       <script>
         window.onload = function () {
           setBanner();
+          
+          images.forEach((image) => {
+            handleImageLoading(image);
+          });
         };
       </script>
     </div>
