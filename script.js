@@ -24,8 +24,6 @@ function setBanner() {
   );
 }
 
-setBanner();
-
 const pathnameList = ["/"];
 
 // Pjax 无感刷新
