@@ -69,3 +69,12 @@ function handleImageLoading(image) {
     image.style.filter = "blur(0)";
   });
 }
+
+// 页脚统计
+sendGetRequest(
+  "https://api.dailyen.666-114514.eu.org/tj",
+  function (response) {
+    var uv = JSON.parse(response).uv;
+    document.querySelector("uv").innerHTML = uv;
+  }
+);
