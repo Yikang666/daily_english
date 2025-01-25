@@ -1,27 +1,13 @@
-// 发送请求
-const xhr = new XMLHttpRequest();
-
-function sendGetRequest(url, callback) {
-  xhr.open("GET", url);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      callback(xhr.response);
-    }
-  };
-  xhr.send();
-}
-
 function setBanner() {
-  sendGetRequest(
-    "https://mirror.666-114514.eu.org/https://open.iciba.com/dsapi/",
-    function (response) {
-      const data = JSON.parse(response);
+  fetch("https://mirror.666-114514.eu.org/https://open.iciba.com/dsapi/")
+    .then((response) => response.json())
+    .then((data) => {
       document
         .querySelector(".banner img")
         .setAttribute("src", data.fenxiang_img);
       document.querySelector(".banner audio").setAttribute("src", data.tts);
-    }
-  );
+    })
+    .catch((error) => console.error("Error fetching data:", error));
 }
 
 const pathnameList = ["/"];
@@ -70,10 +56,10 @@ function handleImageLoading(image) {
   });
 }
 
-// 页脚统计
-sendGetRequest("https://api.dailyen.666-114514.eu.org/tj", function (response) {
-  uv = JSON.parse(response).uv;
-  window.onload = function () {
-    document.querySelector("#uv").innerText = uv;
-  };
-});
+// 页脚访客统计
+fetch("https://api.dailyen.666-114514.eu.org/tj")
+  .then((response) => response.json())
+  .then((data) => {
+    document.querySelector("#uv").innerHTML = data.uv;
+  })
+  .catch((error) => console.error("Error fetching UV count:", error));
